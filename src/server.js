@@ -12,5 +12,10 @@ server.use(express.json());
 //rourters
 server.use("/posts", postRouter);
 server.use("/writers", writerRouter);
+server.get("/", (request, response) => {
+    response.json({
+        message: "API Devto"
+    })
+})
 
 module.exports = server;
